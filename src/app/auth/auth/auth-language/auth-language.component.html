@@ -1,0 +1,19 @@
+<button
+  type="button"
+  pButton
+  pRipple
+  *ngIf="currentLang === 'en'"
+  label="عربي"
+  class="ms-auto p-button-outlined-white"
+  (click)="changeCurrentLang('ar')"
+></button>
+
+<button
+  type="button"
+  pButton
+  pRipple
+  *ngIf="currentLang === 'ar'"
+  label="English"
+  class="me-auto p-button-outlined-white"
+  (click)="changeCurrentLang('en')"
+></button>

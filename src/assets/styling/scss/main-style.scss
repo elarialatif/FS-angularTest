@@ -1,0 +1,42 @@
+// Global stylesheet where import all other stylesheets
+
+
+
+
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+@import "~primeng/resources/themes/saga-blue/theme.css";
+
+@import "~primeng/resources/primeng.min.css";
+
+@import "~primeicons/primeicons.css";
+
+// Variable
+@import "./variables/variables";
+
+// Mixins
+@import "./mixins/mixins";
+
+// Fonts
+@import "./fonts/fonts";
+
+// Icon Fonts
+@import "./icon-fonts/icon-fonts";
+
+// Base
+@import "./base/base";
+
+// Globals
+@import "./globals/globals";
+// Themes
+@import "./themes/themes";
+
+// Utilities
+@import "./utilities/utilities";
+
+//Prime NG
+@import "./globals/_prime-ng";
+
+
+

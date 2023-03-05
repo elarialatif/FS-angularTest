@@ -1,0 +1,262 @@
+// Bottom Logo
+
+.auth-container {
+  overflow-y: auto;
+  .items-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 150px));
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    p-card {
+      cursor: pointer;
+      .p-card {
+        border-radius: 4px;
+      }
+      .p-card-content {
+        @include flex($direction: column, $align: center, $justify: center);
+        gap: 0.5rem;
+        color: $lightBlue;
+        i {
+          font-size: 2em;
+        }
+        p {
+          color: $lightBlue;
+          font-size: 1.2em;
+        }
+      }
+      &:focus,
+      :hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+  .help-container {
+    p {
+      color: $white;
+      font-size: 1.2em;
+    }
+  }
+
+  &.bottom-logo {
+    &::after {
+      content: "";
+      background-image: url(./../../../images/login/mask-group.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 8.784773060029282vw; // 120px
+      height: 8.784773060029282vw; // 120px
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &.before-login-container {
+    height: 100vh;
+    padding: 1rem;
+    @include gradientBackground(
+      181.17deg,
+      $gradient-color-start-two,
+      $gradient-color-stop-two,
+      -3.44%,
+      100.72%
+    );
+    .before-login-body {
+      @include flex($direction: column, $align: center, $justify: center);
+      gap: 2rem;
+      height: calc(100% - 55px);
+    }
+  }
+  &.distributors-container {
+    min-height: 100vh;
+    padding: 1rem;
+    position: relative;
+    @include flex($direction: column);
+    gap: 1.5rem;
+    @include gradientBackground(
+      181.17deg,
+      $gradient-color-start-two,
+      $gradient-color-stop-two,
+      -3.44%,
+      100.72%
+    );
+  }
+  &.login-container {
+    @include flex($justify: center);
+    height: 100vh;
+    .left-content-container {
+      width: 50%;
+      @include flex($direction: column);
+      padding: 1rem;
+      gap: 3rem;
+      @include sm-max {
+        width: 100%;
+        gap: 1rem;
+        @include gradientBackground(
+          181.17deg,
+          $gradient-color-start-two,
+          $gradient-color-stop-two,
+          -3.44%,
+          100.72%
+        );
+        .p-button {
+          background-color: transparent;
+          color: $white;
+          border-color: $white;
+          &:hover,
+          &:focus {
+            background-color: $white;
+            color: $darkColor;
+          }
+        }
+      }
+
+      .form-container {
+        @include flex($justify: center, $direction: column);
+        height: calc(100% - 200px);
+        gap: 3rem;
+        align-items: start;
+        padding: 0 5rem;
+        @include sm-max {
+          padding: 0;
+        }
+        @include md-max {
+          padding: 0 2rem;
+        }
+        @include md-xl {
+          padding: 0 2.5rem;
+        }
+        .logo {
+          display: block;
+          @include sm-max {
+            display: none;
+          }
+          img {
+            width: 62px;
+            height: 124px;
+          }
+        }
+        .logo-mobile {
+          display: none;
+          @include sm-max {
+            display: block;
+            img {
+              margin: auto;
+            }
+          }
+        }
+        .button-container {
+          margin-top: 1rem;
+          button {
+            @include sm-max {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .right-content-container {
+      @include flex($direction: column);
+      width: 50%;
+      padding: 1rem;
+      gap: 3rem;
+      @include sm-max {
+        display: none;
+      }
+      @include gradientBackground(
+        181.17deg,
+        $gradient-color-start-two,
+        $gradient-color-stop-two,
+        -3.44%,
+        100.72%
+      );
+
+      .right-content {
+        @include flex($justify: center, $align: center, $direction: column);
+        height: calc(100% - 200px);
+        .right-header {
+          @include flex($justify: center, $align: center, $direction: column);
+          p {
+            font-family: "ExtraLight";
+            margin-top: 0.5rem;
+          }
+          margin-bottom: 2.5rem;
+        }
+        .img-container {
+          img {
+            height: auto;
+            max-height: 290px;
+            max-width: 700px;
+            filter: drop-shadow(5px 5px 5px #222);
+          }
+        }
+      }
+    }
+  }
+  &.register-page {
+    height: 100vh;
+    padding: 1rem;
+    .auth-top-conatiner {
+      @include sm {
+        margin-bottom: 40px;
+      }
+      @include md {
+        margin-bottom: 0;
+      }
+    }
+
+    @include gradientBackground(
+      181.17deg,
+      $gradient-color-start-two,
+      $gradient-color-stop-two,
+      -3.44%,
+      100.72%
+    );
+
+    .commercial-registration-container {
+      p-card {
+        @include sm {
+          width: 90%;
+        }
+        @include md {
+          width: 550px;
+        }
+        .p-card {
+          border-radius: 4px;
+          .p-inputgroup {
+            button {
+              width: 140px;
+            }
+          }
+          .commercial-bottom-container {
+            @include flex($align: center, $justify: flex-end);
+          }
+        }
+      }
+      .help-container {
+        text-align: center;
+        p {
+          &:first-child {
+            font-size: 1.35em;
+          }
+        }
+      }
+    }
+    .account-type-container,
+    .commercial-registration-container {
+      @include flex($align: center, $justify: center, $direction: column);
+      gap: 1.5rem;
+      @include sm {
+        height: auto;
+      }
+      @include md {
+        height: calc(100% - 55px);
+      }
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+@import "../../../../../assets/styling/scss/variables/variables";
+@import "../../../../../assets/styling/scss/mixins/media-query";
+
+.container-div {
+  align-items: center;
+  height: 100%;
+  padding: 0 25px;
+  .left-content {
+    margin-bottom: 0;
+    padding-left: 200px;
+  }
+  .right-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 20px;
+
+    .search-input {
+      background: $placeholder;
+      border-radius: 32px;
+      height: 40px;
+      width: 230px;
+      color: $darkGrey;
+      background-image: url("/assets/images/search-icon.png");
+      background-repeat: no-repeat;
+      background-position: 20px 14px;
+      text-indent: 45px;
+      font-size: 16px;
+    }
+  }
+  @include lg-max {
+    padding: 0;
+  }
+}
+
+.cart-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pi-shopping-cart {
+    font-size: 1.2rem;
+  }
+
+  .card-items-container {
+    border-radius: 50%;
+    background: #71984a;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 0.4rem;
+
+    @include sm-max {
+      width: 18px;
+      height: 18px;
+    }
+
+    @include md-max {
+      width: 20px;
+      height: 20px;
+      padding: 0.5rem;
+    }
+
+    .card-items {
+      font-size: 0.6em;
+      color: $white;
+
+      @include sm-max {
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+
+.notification-icon,
+.cart-icon {
+  img {
+    object-fit: cover;
+    width: 1rem;
+  }
+}
+
+.cart-icon {
+  img {
+    width: 1.15rem;
+
+    @include sm-max {
+      width: 1.8rem;
+    }
+
+    @include md-max {
+      width: 2.2rem;
+    }
+
+    @include lg-max {
+      width: 1.4rem;
+    }
+  }
+}
+
+.pi-shopping-cart {
+  color: $lightBlue;
+}
+
+.mobile-nav {
+  background-color: $primaryBlue;
+  display: flex;
+  margin: 0;
+  padding: 10px 25px;
+  justify-content: space-between;
+  @include md-max {
+    padding: 13px 25px;
+  }
+  @include lg-max {
+    padding: 18px 25px;
+  }
+
+  .logo-container {
+    img {
+      @include md-max {
+        width: 6.5vw;
+      }
+    }
+    img {
+      @include lg-max {
+        width: 5.5vw;
+      }
+    }
+  }
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .p-button:focus {
+      box-shadow: none !important;
+    }
+    ::ng-deep p-menu {
+      margin-left: -20px;
+    }
+    .p-button ::ng-deep {
+      background-color: transparent;
+      border: none;
+      .pi-bars {
+        font-size: 30px;
+        @include md-max {
+          font-size: 40px;
+        }
+        @include lg-max {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  .menu ::ng-deep {
+    .p-menu.p-menu-overlay {
+      top: 98px !important;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    .p-menuitem-link {
+      font-size: 20px;
+      font-family: "semilight";
+    }
+    .bottom-container {
+      display: flex;
+      flex-direction: column-reverse;
+      a {
+        font-size: 20px;
+        font-family: "SemiLight";
+        color: #495057;
+        display: flex;
+        padding: 0.75rem 1.5rem;
+        img {
+          margin: unset !important;
+        }
+        span {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .container-div {
+    padding: 0;
+  }
+}
+
+.search-input{
+  visibility: hidden;
+}
+h6 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  
+  span {
+    position: relative;
+    top: 1rem;
+  }
+}

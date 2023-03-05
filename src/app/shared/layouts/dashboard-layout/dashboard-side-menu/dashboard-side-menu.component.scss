@@ -1,0 +1,122 @@
+@import "../../../../../assets/styling/scss/variables/variables";
+@import "../../../../../assets/styling/scss/mixins/mixins";
+.side-menu {
+  @include gradientBackground(
+    181.17deg,
+    $gradient-color-start-one,
+    $lightPurple,
+    -3.44%,
+    100.72%
+  );
+  height: 100vh;
+  position: fixed;
+  width: 180px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+    width: 0.3703703703703704vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $lightBlue;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  .logo-container {
+    flex: 10%;
+  }
+  nav {
+    margin-top: 30px;
+    flex: 80%;
+    a {
+      font-size: 14px;
+      color: $white;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      &.disabled{
+        cursor: not-allowed;
+      }
+      img {
+        margin-bottom: 10px;
+        align-self: center;
+      }
+      &.active {
+        background-color: $active-color;
+      }
+    }
+  }
+  .bottom-container {
+    flex: 10%;
+    img{
+      border-radius: 50%;
+      display: inline-block;
+    }
+    img:not(.ar-flag){
+      display: inline-block;
+      border-radius: 50%;
+      height: 23px;
+      width: 23px;
+    }
+    span {
+      color: $white;
+      margin-left: 5px;
+      line-height: 23px;
+      vertical-align: middle;
+      font-size: 14px;
+      margin: 10px;
+    }
+    .logout-btn {
+      border: 1px solid $white;
+      border-radius: 4px;
+      color: white;
+      display: inline-block;
+      text-transform: uppercase;
+      margin-top: 15px;
+      padding: 5px 10px;
+      font-size: 16px;
+      display: block;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+  .pi {
+    color: #fff;
+    position: relative;
+    top: 0.2rem;
+  }
+}
+::ng-deep .p-panelmenu .p-panelmenu-header > a {
+  padding: 1rem 0.6rem;
+
+
+}
+::ng-deep .p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link {
+  text-align: initial;
+}
+::ng-deep .p-panelmenu .p-panelmenu-panel {
+  margin-bottom: 0.5rem;
+}
+
+::ng-deep .p-panelmenu .p-panelmenu-header > a:focus,
+::ng-deep .p-panelmenu .p-panelmenu-header > a.p-menuitem-link-active {
+  box-shadow: none;
+  background-color: #2e2668;
+  border: 1px solid #2e2668;
+  color: #fff;
+}
+.langBtn {
+  background-color: transparent;
+  border: none;
+}

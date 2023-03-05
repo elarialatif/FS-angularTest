@@ -1,0 +1,12 @@
+<div class="side-menu text-center display-lg">
+  <div class="logo-container text-white">
+    Logo
+  </div>
+  <nav>
+    <p-panelMenu [model]="items" [style]="{'width':'170px'}"></p-panelMenu>
+  </nav>
+
+  <div id="container-bottom" class="bottom-container">
+    <a  class="logout-btn" (click)="logout()">{{'logout' | translate}}</a>
+  </div>
+</div>

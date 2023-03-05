@@ -1,0 +1,37 @@
+::ng-deep p-card .p-card {
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  height: 150px;
+}
+::ng-deep .p-card-header {
+  font-weight: bold;
+  p{
+    margin-bottom: 0;
+  }
+}
+::ng-deep .p-card-content p {
+  font-size: 1rem;
+}
+.orange {
+  color: #FFA500;
+}
+.blue {
+  color: #0000FF;
+}
+.red {
+  color: #800000;
+}
+.green {
+  color: #008000;
+}
+.yellow {
+  color: #bcbc18;
+}
+.barChart{
+  padding: 0 1rem;
+  h5 {
+    text-align: center;
+    margin: 1rem auto;
+  }
+}

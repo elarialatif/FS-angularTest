@@ -1,0 +1,72 @@
+<div class="add-button d-flex justify-content-end mb-3">
+  <a pButton pRipple type="button" (click)="display=true"  [label]="'add' | translate | titlecase"></a>
+</div>
+
+<div class="table-body">
+
+  <p-table [columns]="cols" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+      [rowsPerPageOptions]="[10, 25, 50]" [value]="products" responsiveLayout="scroll">
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+              <th *ngFor="let col of columns">
+                  {{ col.header | translate}}
+              </th>
+
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns" let-index="rowIndex">
+
+          <tr >
+              <td *ngFor="let col of columns">
+                  <ng-container>
+                      <div *ngIf="col.isDate; else action">
+                          {{ rowData[col.field] | date:'dd/MMM/yyyy' }}
+                      </div>
+                  </ng-container>
+                  <ng-template #action>
+                      <div *ngIf="col.isAction; else default" class="row" style="text-align: center;">
+
+                          <div id="element2" class="row">
+                            <button pButton pRipple type="button" icon="pi pi-pencil" (click)="editDialog(rowData)"
+                            class="p-button-rounded p-button-default p-button-text col-md-4"></button>
+
+                            <button pButton pRipple type="button" icon="pi pi-trash" (click)="Delete(rowData)"
+                                class="p-button-rounded p-button-danger p-button-text col-md-4"></button>
+                          </div>
+
+                      </div>
+
+                  </ng-template>
+                  <ng-template #default>
+                    <span class="p-float-label w-100"> {{ rowData[col.field] }} </span>
+                  </ng-template>
+              </td>
+          </tr>
+      </ng-template>
+
+  </p-table>
+</div>
+
+<p-dialog  (onHide)="cancelDialog()" [(visible)]="display" [style]="{width: '50vw'}">
+  <form [formGroup]="form">
+      <div class="col-md-1 col-lg-5 mb-2">
+          <div class="input-child-row-2 custom-formControl-column custom-text-input">
+            <input type="text" label="code"  pInputText [placeholder]="'code' | translate" [readOnly]="" formControlName="code" />
+          </div>
+        </div>
+        <div class="col-md-1 col-lg-5 mb-2">
+          <div class="input-child-row-2 custom-formControl-column custom-text-input">
+            <input type="text"  pInputText [placeholder]="'englishDescription' | translate" [readOnly]="" formControlName="englishDescription" />
+          </div>
+        </div>
+        <div class="col-md-1 col-lg-5 mb-2">
+          <div class="input-child-row-2 custom-formControl-column custom-text-input">
+            <input type="text"  pInputText [placeholder]="'arabicDescription' | translate" [readOnly]="" formControlName="arabicDescription" />
+          </div>
+        </div>
+
+  </form>
+      <ng-template pTemplate="footer">
+          <p-button icon="pi pi-check" (click)="save()" [label]="'Save'| translate" [disabled]="!form.valid" styleClass="p-button-text"></p-button>
+      </ng-template>
+  </p-dialog>

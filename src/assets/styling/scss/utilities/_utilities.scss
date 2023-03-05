@@ -1,0 +1,20 @@
+// Utilities
+.vl {
+  height: 100%;
+  min-height: 20px;
+  width: 1px;
+  display: block;
+  background: #d4d0d0;
+}
+
+.min-h-160{
+  min-height: 160px;
+}
+
+.min-h-210{
+  min-height: 210px;
+}
+
+.pointer{
+  cursor: pointer !important;
+}

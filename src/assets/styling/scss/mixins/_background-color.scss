@@ -1,0 +1,13 @@
+@mixin gradientBackground(
+  $direction,
+  $startColor,
+  $endColor,
+  $startColorPercentage,
+  $endColorPercentage
+) {
+  background: linear-gradient(
+    $direction,
+    $startColor $startColorPercentage,
+    $endColor $endColorPercentage
+  );
+}

@@ -1,0 +1,387 @@
+// Language Classes
+
+ .rtl{
+  direction: rtl;
+  .custom-number-input {
+    margin-bottom: 1.5rem !important;
+    input {
+      direction: ltr !important;
+      width: 100% !important;
+    }
+    .password-input{
+      width: 100% !important;
+    }
+
+  }
+   .p-toast-top-right {
+    top: 20px;
+    right: 20px;
+    left:unset;
+  }
+  .option-input {
+    width: 200px;
+    margin-top: 0.5rem;
+  }
+  .employee-card h6 {
+    float: right !important;
+  }
+  .auth-container.bottom-logo::after{
+    left: 0 !important;
+    right: unset !important;
+  }
+
+  .p-float-label > label{
+    left: unset;
+    right: 0.5rem;
+  }
+  .p-input-icon-right > i:last-of-type {
+    right: unset;
+    left: 0.5rem;
+  }
+  .p-inputtext {
+    padding-right: 1rem;
+    text-align: right;
+}
+ }
+.wrapper {
+  &.rtl {
+    direction: rtl;
+
+    .list-inline li:not(:last-of-type) a::after {
+      content: "\e931" !important;
+    }
+    .ms-auto {
+      margin-right: auto !important;
+      margin-left: inherit !important;
+    }
+    .main-container {
+      margin-right: 180px;
+    }
+    .p-panelmenu .p-panelmenu-header > a .p-menuitem-icon {
+      margin-left: 0.5rem;
+    }
+    .p-panelmenu .p-panelmenu-header > a .p-panelmenu-icon,
+    .p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link .p-menuitem-icon {
+      margin-left: 0.5rem;
+    }
+    .menu-container {
+      .container-div {
+        .left-content {
+          padding-right: 200px;
+          .list-inline {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    .dropdownCard h6 {
+      float: right !important;
+    }
+
+
+
+    .distributors-container .distributors-cards-container {
+      .cards {
+        .card-container {
+          margin: 2vw 0 0 2vw !important;
+        }
+      }
+    }
+
+    .p-inline-message .p-inline-message-icon {
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+
+    #container-bottom {
+      .ng-star-inserted {
+        @media only screen and (max-width: $screen-xl) {
+          img {
+            margin-right: 0 !important;
+            margin-left: 2vw !important;
+          }
+        }
+      }
+    }
+    .back-btn {
+      align-items: flex-end;
+      .p-button-icon-left {
+        transform: rotateY(180deg);
+        height: auto;
+      }
+    }
+
+    .p-button .p-button-icon-left {
+      margin-right: 0;
+      margin-left: 0.5rem;
+      //transform: rotateY(180deg);
+    }
+
+    .p-button i {
+      transform: rotateY(180deg);
+    }
+
+    .bottom-logo {
+      &::after {
+        right: auto;
+        left: 0;
+      }
+    }
+    .p-field-checkbox label {
+      margin-left: unset;
+      margin-right: 10px;
+    }
+    .custom-upload-label {
+      margin-right: auto;
+      margin-left: unset !important;
+    }
+    .btn-container {
+      padding-right: 0;
+      button {
+        margin-right: unset !important;
+        margin-left: 10px;
+      }
+    }
+    .proceed-text {
+      margin-right: 5px;
+    }
+
+    p-steps .p-steps {
+      ul .p-steps-item {
+        &:after {
+          right: 38%;
+          left: unset !important;
+        }
+        .p-steps-title {
+          margin-right: 10px;
+          margin-left: unset !important;
+        }
+      }
+    }
+    .p-datatable .p-datatable-thead > tr > th,
+    .p-datatable .p-datatable-tbody > tr > td {
+      text-align: right;
+    }
+    .user-icon,
+    .input-container-with-icon .content svg,
+    .input-container-with-icon .content img {
+      margin-left: 10px !important;
+      margin-right: unset !important;
+    }
+
+    .p-button.p-button-outlined svg {
+      margin-left: 5px;
+      margin-right: unset !important;
+    }
+    .me-auto {
+      margin-left: auto;
+      margin-right: unset !important;
+    }
+
+    .on-boarding-step-container .right-container {
+      left: 0;
+      right: unset !important;
+    }
+    .steps-info {
+      left: unset !important;
+      right: 0;
+      .step-no {
+        margin-right: 0;
+        margin-left: unset !important;
+      }
+    }
+
+    .p-float-label > label {
+      right: 0.5rem;
+      left: unset;
+    }
+    .p-float-label input:focus ~ label,
+    .p-float-label input.p-filled ~ label,
+    .p-float-label textarea:focus ~ label,
+    .p-float-label textarea.p-filled ~ label,
+    .p-float-label .p-inputwrapper-focus ~ label,
+    .p-float-label .p-inputwrapper-filled ~ label {
+      right: 0;
+      left: unset;
+      top: -15px;
+    }
+    ng-otp-input {
+      .wrapper {
+        direction: ltr;
+        .otp-input {
+          margin-left: 8px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .p-dropdown.p-dropdown-clearable .p-dropdown-label {
+      padding-right: 0.5rem;
+      padding-left: 1.5rem;
+    }
+    .p-dropdown .p-dropdown-clear-icon {
+      right: unset;
+      left: 2.357rem;
+    }
+    .p-dropdown-panel .p-dropdown-header .p-dropdown-filter {
+      padding-right: 2rem;
+      margin-right: unset;
+    }
+    .custom-upload-input .custom-file-label {
+      flex-direction: row-reverse;
+      text-align: left;
+      padding-right: 75px;
+    }
+    .p-checkbox-label {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+    .p-paginator .p-dropdown .p-dropdown-label {
+      padding-right: 0.5rem;
+    }
+    .p-radiobutton-label {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+    .error-message-container p-message > div span.p-inline-message-icon {
+      margin-right: 0;
+      margin-left: 0.5rem;
+    }
+    .custom-calender-input {
+      .p-datepicker-prev-icon,
+      .p-datepicker-next-icon {
+        transform: rotate(180deg);
+      }
+    }
+    .custom-upload-input .custom-file-label::after {
+      content: "تصفح";
+    }
+    .error-p-msg .p-inline-message-error {
+      border-width: 0 6px 0 0;
+    }
+    p-table {
+      .p-paginator {
+        > button {
+          > span {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .custom-download button {
+      right: unset !important;
+      left: 0;
+    }
+    .notes-btn-contanier {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .p-input-icon-right > i:last-of-type {
+      right: unset !important;
+      left: 0.5rem;
+    }
+
+    .p-input-icon-right > .p-inputtext {
+      padding-right: 11px !important;
+      padding-left: 2rem;
+    }
+
+    .img-preview img{
+      margin-right: 0;
+      margin-left: 15px;
+    }
+
+    .payment-error-msg{
+      .p-message.p-message-error {
+        border-width: 0 6px 0 0;
+      }
+    }
+
+    .validation-err-message{
+      .p-message{
+        .p-inline-message-icon{
+          margin-left: 0.5rem;
+          margin-right: unset !important;
+        }
+      }
+    }
+
+    .address-input{
+      input.mobile , .mobile{
+          margin-right: auto;
+          margin-left: unset !important;
+      }
+    }
+    .rating-dialog{
+      button{
+        margin-right: auto;
+      }
+    }
+
+    .mobile-number-input {
+      .p-inputgroup-addon{
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-right: 1px solid #ced4da;
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      input{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      img{
+        margin-left: 5px;
+        margin-right: unset;
+      }
+      label {
+        left: auto;
+        right: 4.3rem;
+      }
+    }
+  }
+
+  &.ltr {
+    direction: ltr;
+    .lang-steps{
+      .p-button.p-button-outlined-white{
+        margin-right: auto;
+        margin-left: unset !important;
+      }
+     }
+
+    .main-container {
+      margin-left: 129px;
+    }
+    .menu-container {
+      .container-div {
+        .left-content {
+          padding-left: 140px;
+        }
+      }
+    }
+    .notes-btn-contanier {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .dashboard-items{
+      .card-container .card-content
+      {
+        margin-left:unset !important;
+        margin-right:auto;
+      }
+      .details-link{
+        text-align: right;
+      }
+    }
+    .vehicle-plate-inputs{
+      flex-direction: row-reverse;
+    }
+
+  }
+}

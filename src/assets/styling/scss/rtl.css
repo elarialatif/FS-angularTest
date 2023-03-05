@@ -1,0 +1,59 @@
+body.rtl{
+    direction: rtl;
+}
+
+
+.rtl h1 , .rtl .nav-item .nav-link, .rtl .account-type p, .rtl .invalid-feedback,.rtl .details , .rtl .resend-code, .rtl #otpInput input,
+ .rtl .bs-stepper-circle , .rtl .reset-details , .rtl footer p{
+    font-family: "Cairo" !important;
+}
+
+.text-end {
+    text-align: left!important;
+}
+
+.rtl #user-type-image , .rtl .overlay{
+    transform: scaleX(-1);
+}
+
+/* tabs */
+
+.rtl .nav-item:first-of-type {
+    margin-right: 0;
+    margin-left:20px;
+}
+
+/* form */
+
+.rtl .form-floating>label {
+    left: unset;
+    right: 0;
+}
+
+.rtl .form-control.is-invalid, .was-validated .form-control:invalid ,.form-control.is-valid, .was-validated .form-control:valid{
+    background-position: left calc(0.375em + 0.1875rem) center;
+}
+.rtl .form-floating>label.crlbl{
+    right: 10px;
+}
+
+.rtl #otpInput{
+    direction: ltr !important;
+}
+
+.rtl .form-floating>label:before{
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.rtl .invalid-feedback{
+    font-size: 14px;
+}
+
+.rtl .reset-details {
+    font-size: 17px;
+}
+
+.rtl .resend-code{
+    font-size: 16px;;
+}

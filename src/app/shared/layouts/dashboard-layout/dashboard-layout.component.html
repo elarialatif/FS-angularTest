@@ -1,0 +1,16 @@
+<div class="wrapper" [ngClass]="'currentTheme' | translate">
+  <div class="d-flex menu-container">
+    <aside>
+      <!-- <app-dashboard-side-menu [navLinks]="navLinks"></app-dashboard-side-menu> -->
+      <app-dashboard-side-menu ></app-dashboard-side-menu>
+
+    </aside>
+    <nav>
+      <app-dashboard-navbar [navLinks]="navLinks"></app-dashboard-navbar>
+    </nav>
+  </div>
+  <main class="main-container">
+    <router-outlet></router-outlet>
+    <!-- <div *ngFor="let item of navLinks">{{item.label}}</div> -->
+  </main>
+</div>

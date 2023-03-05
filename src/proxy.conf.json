@@ -1,0 +1,8 @@
+{
+    "/": {
+        "target": "https://ia.wisys.com.sa:4282/",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

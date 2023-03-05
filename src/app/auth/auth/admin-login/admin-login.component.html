@@ -1,0 +1,81 @@
+<div class="login-container auth-container bottom-logo">
+  <div class="left-content-container">
+    <div class="d-flex justify-content-between">
+    </div>
+
+    <div class="form-container">
+      <form [formGroup]="form" class="form-body-column w-100">
+        <div class="custom-formControl-column custom-number-input mb-4">
+          <span class="p-float-label w-100">
+            <input pInputText type="text" name="userName" id="userName" formControlName="userName" [maxlength]="30" email="true" />
+            <label for="userName">{{ "Username"  |translate}}</label>
+          </span>
+          <div class="error-message-container" *ngIf="
+                (adminForm['userName']?.invalid &&
+                (adminForm['userName']?.dirty ||
+                    adminForm['userName']?.touched)) ||
+                (adminForm['userName']?.untouched && isFormSubmitted)
+              ">
+            <ng-container *ngIf="adminForm['userName']?.errors?.['required']">
+              <p-message severity="error" [text]="'This field is required.'  | translate "></p-message>
+            </ng-container>
+            <ng-container *ngIf="adminForm['userName']?.errors?.['email']">
+              <p-message severity="error" [text]="'This field must be email pattern.'  | translate "></p-message>
+            </ng-container>
+            <ng-container *ngIf="adminForm['userName']?.hasError('range')">
+              <p-message severity="error" [text]="'UserName must be more than 3 characters'  | translate  ">
+              </p-message>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="custom-formControl-column custom-number-input mb-2">
+          <span class="p-input-icon-right p-password w-100 p-float-label password-input">
+            <i style="cursor: pointer" [ngClass]="currentPassword.type == 'password'? 'pi pi-eye': 'pi pi-eye-slash'"
+              (click)="currentPassword.type =currentPassword.type == 'password' ? 'text' : 'password'"></i>
+            <input pInputText type="password" id="float-input-invalid" name="float-input-invalid" [maxlength]="30"
+              pPassword #currentPassword formControlName="password" />
+            <label for="float-input-invalid">{{"password"|translate}}</label>
+          </span>
+          <div class="error-message-container" *ngIf="
+              (adminForm['password']?.invalid &&
+              (adminForm['password']?.dirty ||
+                adminForm['password']?.touched)) ||
+            (adminForm['password']?.untouched && isFormSubmitted)
+              ">
+            <div *ngIf="adminForm['password'].errors">
+              <div *ngIf="adminForm['password'].errors['required']">
+                <p-message severity="error" [text]="'This field is required.'| translate"></p-message>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="noUserFound" class="error-message-container">
+          <p-message severity="error" [text]="'This user is not found.' "></p-message>
+        </div>
+
+        <div class="button-container">
+          <button pRipple pButton type="submit" class="p-button" (click)="submitAdminLogin()"
+            label="{{ 'login'| translate   }}"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="right-content-container">
+    <div class="right-content">
+      <div class="right-header">
+        <h1 class="text-capitalize white">
+          Welcome
+        </h1>
+        <p class="white">
+          on our project
+        </p>
+      </div>
+      <div class="img-container">
+        <img src="../../../assets/images/login/laptop-img.png" alt="Laptop Image" />
+      </div>
+    </div>
+  </div>
+
+
+</div>
