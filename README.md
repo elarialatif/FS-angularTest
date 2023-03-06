@@ -17,7 +17,7 @@ Using `https://jsonplaceholder.typicode.com/users/1` For Get user Data to displa
 ## ===================== Note =======================
 I used `jsonplaceholder`, For users page <br />
 List works well 
-Add New Returns Code 201 that's mean function is worked successfully but not return response  $${\color{red}`So I tried to use another api To make it clear that everything is working well`}$$ You Can check it by testing `products page`.
+Add New Returns Code 201 that's mean function is worked successfully but not return response <br /> `So I tried to use another api To make it clear that everything is working well` <br /> You Can check it by testing `products page`.
 
 ## Technologies
 1- `Angular 13`
