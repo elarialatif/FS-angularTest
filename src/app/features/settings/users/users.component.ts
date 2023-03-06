@@ -146,10 +146,10 @@ export class UsersComponent implements OnInit {
       console.log(user)
       this._userService.UpdateUser(user).subscribe(res => {
         if (res) {
-          // this.display = false;
-          // this.initForm();
-          // console.log(this.form.value);
-          // this.getUsersData();
+          this.display = false;
+          this.initForm();
+          console.log(this.form.value);
+          this.getUsersData();
         }
       })
     }
