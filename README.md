@@ -13,3 +13,12 @@ You can using email`test@test.com`and password `123`.
 
 ## Profile Page
 Using `https://jsonplaceholder.typicode.com/users/1` For Get user Data to display on Profile page.
+
+
+## Technologies
+1- `Angular 13`
+2- `primeNg 13`
+3- `primeIcon 5`
+4- `Type Script 4`
+5- `tailwindcss 3`
+6- `rxjs 7`
