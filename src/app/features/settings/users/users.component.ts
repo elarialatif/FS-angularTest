@@ -45,16 +45,20 @@ export class UsersComponent implements OnInit {
 
   initForm() {
     this.form = this._fb.group({
-      code: [null, Validators.required],
-      englishDescription: [null, Validators.required],
-      arabicDescription: [null, Validators.required],
+      name: [null, Validators.required],
+      username: [null, Validators.required],
+      email: [null, Validators.required],
+      phone: [null, Validators.required],
+      website: [null, Validators.required],
     })
   }
   initcols(){
     this.cols=[
-      {field:'name', header:'Name'},
-      {field:'username', header:'User Name'},
-      {field:'email', header:'Email'},
+      { field:'name', header:'Name'},
+      { field:'username', header:'User Name'},
+      { field:'email', header:'Email'},
+      { field:'phone', header:'Phone'},
+      { field:'website', header:'Website'},
       { field:  '' , header: 'Action' ,isAction: true  },
     ];
 
@@ -82,12 +86,37 @@ export class UsersComponent implements OnInit {
     // console.log(this.form.value);
     if (this.form.invalid) return;
     if (!this.id) {
-      const product ={
-        code:this.form.value.code,
-        englishDescription:this.form.value.englishDescription,
-        arabicDescription:this.form.value.arabicDescription,
+      const user = {
+        name:this.form.value.name,
+        username:this.form.value.username,
+        email:this.form.value.email,
+        phone:this.form.value.phone,
+        website:this.form.value.website,
+        address: {
+          street: "Kulas Light",
+          suite: "Apt. 556",
+          city: "Gwenborough",
+          zipcode: "92998-3874",
+          geo: {
+            lat: "-37.3159",
+            lng: "81.1496"
+          }
+        },
+        company: {
+          name: "Romaguera-Crona",
+          catchPhrase: "Multi-layered client-server neural-net",
+          bs: "harness real-time e-markets"
+        }
       }
-      this._productService.AddNewProduct(product).subscribe((res) => {
+      this._userService.AddNewUser(
+        {
+          user,
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        }
+      ).subscribe((res) => {
+        console.log(user);
         if (res) {
           this.display = false;
           console.log(res);
@@ -99,20 +128,20 @@ export class UsersComponent implements OnInit {
 
     }
     else {
-      const product ={
+      const user ={
         id:this.id,
-        code:this.form.value.code,
-        englishDescription:this.form.value.englishDescription,
-        arabicDescription:this.form.value.arabicDescription,
-        isActive: true
+        name:this.form.value.name,
+        username:this.form.value.username,
+        email:this.form.value.email,
+        phone:this.form.value.phone,
+        website:this.form.value.website,
       }
-      console.log(product)
-      this._productService.UpdateProduct(product).subscribe(res => {
+      console.log(user)
+      this._productService.UpdateProduct(user).subscribe(res => {
         if (res) {
           this.display = false;
           this.initForm();
           console.log(this.form.value);
-          this.renderer.removeClass(this.password.nativeElement, 'hide');
           this.getAllProducts();
         }
       })
@@ -128,11 +157,13 @@ export class UsersComponent implements OnInit {
     console.log( this.id);
     this.form = this._fb.group({
       id:[data.id],
-      code: [data.code],
-      englishDescription: [data.englishDescription],
-      arabicDescription: [data.arabicDescription],
+      name:[data.name],
+      username:[data.username],
+      email:[data.email],
+      phone:[data.phone],
+      website:[data.website],
     })
-    console.log(data.code)
+    console.log(data.name)
     this.display = true;
   }
   Delete(data:any): void {

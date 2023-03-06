@@ -16,4 +16,7 @@ export class UserService {
   getProfileById(){
     return this.http.get<any>('https://jsonplaceholder.typicode.com/users/1')
   }
+  AddNewUser(user: any){
+    return this.http.post<any>('https://jsonplaceholder.typicode.com/users/1', user)
+  }
 }

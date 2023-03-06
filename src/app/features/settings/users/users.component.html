@@ -51,17 +51,27 @@
   <form [formGroup]="form">
       <div class="col-md-1 col-lg-5 mb-2">
           <div class="input-child-row-2 custom-formControl-column custom-text-input">
-            <input type="text" label="code"  pInputText [placeholder]="'code' | translate" [readOnly]="" formControlName="code" />
+            <input type="text" label="name"  pInputText [placeholder]="'Name' | translate" [readOnly]="" formControlName="name" />
           </div>
         </div>
         <div class="col-md-1 col-lg-5 mb-2">
           <div class="input-child-row-2 custom-formControl-column custom-text-input">
-            <input type="text"  pInputText [placeholder]="'englishDescription' | translate" [readOnly]="" formControlName="englishDescription" />
+            <input type="text"  pInputText [placeholder]="'User Name' | translate" [readOnly]="" formControlName="username" />
           </div>
         </div>
         <div class="col-md-1 col-lg-5 mb-2">
           <div class="input-child-row-2 custom-formControl-column custom-text-input">
-            <input type="text"  pInputText [placeholder]="'arabicDescription' | translate" [readOnly]="" formControlName="arabicDescription" />
+            <input type="email"  pInputText [placeholder]="'Email' | translate" [readOnly]="" formControlName="email" />
+          </div>
+        </div>
+        <div class="col-md-1 col-lg-5 mb-2">
+          <div class="input-child-row-2 custom-formControl-column custom-text-input">
+            <input type="text"  pInputText [placeholder]="'Phone' | translate" [readOnly]="" formControlName="phone" />
+          </div>
+        </div>
+        <div class="col-md-1 col-lg-5 mb-2">
+          <div class="input-child-row-2 custom-formControl-column custom-text-input">
+            <input type="text"  pInputText [placeholder]="'Website' | translate" [readOnly]="" formControlName="website" />
           </div>
         </div>
 
