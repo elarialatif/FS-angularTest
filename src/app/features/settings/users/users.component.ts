@@ -108,20 +108,12 @@ export class UsersComponent implements OnInit {
           bs: "harness real-time e-markets"
         }
       }
-      this._userService.AddNewUser(
-        {
-          user,
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
-        }
-      ).subscribe((res) => {
-        console.log(user);
+      this._userService.AddNewUser(user).subscribe((res) => {
         if (res) {
           this.display = false;
           console.log(res);
           this.initForm();
-          this.getAllProducts();
+          this.getUsersData();
 
         }
       })
@@ -135,14 +127,29 @@ export class UsersComponent implements OnInit {
         email:this.form.value.email,
         phone:this.form.value.phone,
         website:this.form.value.website,
+        address: {
+          street: "Kulas Light",
+          suite: "Apt. 556",
+          city: "Gwenborough",
+          zipcode: "92998-3874",
+          geo: {
+            lat: "-37.3159",
+            lng: "81.1496"
+          }
+        },
+        company: {
+          name: "Romaguera-Crona",
+          catchPhrase: "Multi-layered client-server neural-net",
+          bs: "harness real-time e-markets"
+        }
       }
       console.log(user)
-      this._productService.UpdateProduct(user).subscribe(res => {
+      this._userService.UpdateUser(user).subscribe(res => {
         if (res) {
-          this.display = false;
-          this.initForm();
-          console.log(this.form.value);
-          this.getAllProducts();
+          // this.display = false;
+          // this.initForm();
+          // console.log(this.form.value);
+          // this.getUsersData();
         }
       })
     }
@@ -162,14 +169,29 @@ export class UsersComponent implements OnInit {
       email:[data.email],
       phone:[data.phone],
       website:[data.website],
+      address: {
+        street: "Kulas Light",
+        suite: "Apt. 556",
+        city: "Gwenborough",
+        zipcode: "92998-3874",
+        geo: {
+          lat: "-37.3159",
+          lng: "81.1496"
+        }
+      },
+      company: {
+        name: "Romaguera-Crona",
+        catchPhrase: "Multi-layered client-server neural-net",
+        bs: "harness real-time e-markets"
+      }
     })
     console.log(data.name)
     this.display = true;
   }
   Delete(data:any): void {
     this.id=data.id;
-    this._productService.DeleteProduct(this.id).subscribe(res => {
-      this.getAllProducts();
+    this._userService.DeleteUser(this.id).subscribe(res => {
+      this.getUsersData();
     })
   }
   cancelDialog() {

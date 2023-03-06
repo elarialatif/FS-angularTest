@@ -17,6 +17,18 @@ export class UserService {
     return this.http.get<any>('https://jsonplaceholder.typicode.com/users/1')
   }
   AddNewUser(user: any){
-    return this.http.post<any>('https://jsonplaceholder.typicode.com/users/1', user)
+    return this.http.post<any>('https://jsonplaceholder.typicode.com/users', user)
+  }
+  DeleteUser(userId: string){
+    let user ={
+      Id:""
+    };
+    user.Id=userId;
+    return this.http.delete<any>('https://jsonplaceholder.typicode.com/users')
+  }
+
+
+  UpdateUser(user: any){
+    return this.http.put<any>('https://jsonplaceholder.typicode.com/users', user)
   }
 }
