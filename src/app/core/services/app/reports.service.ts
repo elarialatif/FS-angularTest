@@ -1,15 +1,22 @@
-import { Injectable, Injector } from '@angular/core';
-import { ApiUrls } from '../../configs/api-urls';
-import { BaseService } from '../base.service';
+import { Injector, Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
-export class ReportsService extends BaseService {
+export class ReportsService {
+  private http: HttpClient;
+  constructor(injector: Injector) {
+    this.http = injector.get(HttpClient);
+  }
 
-  constructor(injector:Injector) { super(injector)}
-
-
-  getAllProducts(){
-    return this.get<any>(ApiUrls.Reports.GetAllProducts)
+  getUsersReport(){
+    return this.http.get<any>('https://jsonplaceholder.typicode.com/users')
+  }
+  getPostsReport(){
+    return this.http.get<any>('https://jsonplaceholder.typicode.com/posts')
+  }
+  getCommentsReport(){
+    return this.http.get<any>('https://jsonplaceholder.typicode.com/comments')
   }
 }

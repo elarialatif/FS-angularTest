@@ -1,22 +1,34 @@
 <div class="d-flex justify-content-between">
   <div class="w-100">
     <div class="row">
-      <!-- Products -->
-      <div class="col-md-6 col-sm-12">
-        <p-card >
+      <!-- Posts -->
+      <div class="col-md-4 col-sm-12">
+        <p-card>
           <ng-template pTemplate="header">
-            <p class="orange">Products</p>
+            <p>Products</p>
+            <img class="w-128 h-128" alt="Card" src="../../../../assets/images/product.png">
           </ng-template>
-          <p class="orange">{{ productsLength }}</p>
+          <p>{{ productsLength }}</p>
         </p-card>
       </div>
       <!-- Users -->
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-4 col-sm-12">
         <p-card >
           <ng-template pTemplate="header">
-            <p class="blue">Users</p>
+            <p>Users</p>
+            <img class="w-128 h-128" alt="Card" src="../../../../assets/images/users.png">
           </ng-template>
-          <p class="blue">{{ usersLength }}</p>
+          <p>{{ usersLength }}</p>
+        </p-card>
+      </div>
+      <!-- Comments -->
+      <div class="col-md-4 col-sm-12">
+        <p-card >
+          <ng-template pTemplate="header">
+            <p>Comments</p>
+            <img class="w-128 h-128" alt="Card" src="../../../../assets/images/comment.png">
+          </ng-template>
+          <p>{{ commentsLength }}</p>
         </p-card>
       </div>
     </div>

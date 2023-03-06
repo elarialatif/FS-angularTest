@@ -16,11 +16,13 @@ import {InputSwitchModule} from 'primeng/inputswitch';
 import {DialogModule} from 'primeng/dialog';
 import { AbstractControl, ControlValueAccessor, FormBuilder, FormControl, FormGroup, NgControl, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator, Validators } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
+import { UsersComponent } from './users/users.component';
 import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     ProductsComponent,
+    UsersComponent,
     SettingsComponent
   ],
   imports: [

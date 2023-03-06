@@ -19,6 +19,7 @@ export class DashboardSideMenuComponent implements OnInit {
   homeLabel: string = '';
   productsLabel: string = '';
   usersLabel: string = '';
+  profileLabel: string = '';
 
   //
   constructor(
@@ -34,6 +35,7 @@ export class DashboardSideMenuComponent implements OnInit {
     this.homeLabel = 'Home',
     this.productsLabel = 'Products',
     this.usersLabel = 'Users',
+    this.profileLabel = 'Profile',
 
     //
     this.items = [
@@ -49,12 +51,18 @@ export class DashboardSideMenuComponent implements OnInit {
         routerLink: '/pages/settings/products',
         routerLinkActiveOptions: { exact: true },
       },
-      // {
-      //   label: this.usersLabel,
-      //   icon: 'pi pi-users',
-      //   routerLink: '/pages/settings/users',
-      //   routerLinkActiveOptions: { exact: true },
-      // }
+      {
+        label: this.usersLabel,
+        icon: 'pi pi-users',
+        routerLink: '/pages/settings/users',
+        routerLinkActiveOptions: { exact: true },
+      },
+      {
+        label: this.profileLabel,
+        icon: 'pi pi-user',
+        routerLink: '/pages/profile',
+        routerLinkActiveOptions: { exact: true },
+      }
 
     ];
   }

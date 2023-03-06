@@ -2,36 +2,31 @@
   padding: 1rem;
   text-align: center;
   margin-bottom: 1rem;
-  height: 150px;
+  height: auto;
+  ::ng-deep .p-card-header img {
+    width: 128px;
+    height: 128px;
+    margin: 2rem auto 1rem auto;
+}
+
 }
 ::ng-deep .p-card-header {
   font-weight: bold;
   p{
-    margin-bottom: 0;
+    margin: 1rem 0;
+    color: #2E2668;
+    font-size: 1.5rem;
   }
 }
 ::ng-deep .p-card-content p {
-  font-size: 1rem;
-}
-.orange {
-  color: #FFA500;
-}
-.blue {
-  color: #0000FF;
-}
-.red {
-  color: #800000;
-}
-.green {
-  color: #008000;
-}
-.yellow {
-  color: #bcbc18;
+  font-size: 2rem;
+  color: #2E2668;
 }
 .barChart{
   padding: 0 1rem;
   h5 {
     text-align: center;
     margin: 1rem auto;
+
   }
 }
